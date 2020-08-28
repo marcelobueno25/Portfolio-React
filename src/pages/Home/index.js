@@ -44,6 +44,7 @@ function Home() {
       justify="center"
       alignItems="center"
       className={classes.header}
+      spacing={props => props.spacing(3)}
     >
       <Grid item xs={12}>
         <Box>
@@ -58,7 +59,9 @@ function Home() {
       </Grid>
 
       <Grid item xs={12} lg={7}>
-        Text
+        <Box className={classes.boxBiography} p={3}>
+          <Typography variant="h5" component="h5">Sobre mim</Typography>
+        </Box>
       </Grid>
     </Grid>
   );

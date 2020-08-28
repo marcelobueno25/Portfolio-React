@@ -17,7 +17,7 @@ function App() {
         main: '#FF5484'
       }
     },
-
+    spacing: {}
   });
   return (
     <ThemeProvider theme={theme}>
