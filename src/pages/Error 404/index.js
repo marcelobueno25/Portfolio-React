@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, makeStyles, Typography, Box } from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import errorImg from '../../assets/image/error404.svg';
 import Image from './styles';

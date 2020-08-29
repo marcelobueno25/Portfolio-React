@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Box, makeStyles, Typography, Avatar } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import MyImg from '../../assets/image/my.jpg';
 import styled from 'styled-components';
 
@@ -38,32 +37,33 @@ const useStyles = makeStyles((theme) => ({
 function Home() {
   const classes = useStyles();
   return (
-    <Grid
-      container
-      direction="row"
-      justify="center"
-      alignItems="center"
-      className={classes.header}
-      spacing={props => props.spacing(3)}
-    >
-      <Grid item xs={12}>
-        <Box>
-          <Typography variant="h1" component="h1">Header</Typography>
-        </Box>
+    <>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        className={classes.header}
+        spacing={2}
+      >
+        <Grid item xs={12}>
+          <Box>
+            <Typography variant="h1" component="h1">Header</Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} lg={5}>
+          <Box className={classes.boxBiography} p={3}>
+            <StyledAvatar alt="Minha Foto" src={MyImg} />
+            <Typography variant="h5" component="h5">Marcelo Bueno Silva</Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} lg={7}>
+          <Box className={classes.boxBiography} p={3}>
+            <Typography variant="h5" component="h5">Sobre mim</Typography>
+          </Box>
+        </Grid>
       </Grid>
-      <Grid item xs={12} lg={5}>
-        <Box className={classes.boxBiography} p={3}>
-          <StyledAvatar alt="Minha Foto" src={MyImg} />
-          <Typography variant="h5" component="h5">Marcelo Bueno Silva</Typography>
-        </Box>
-      </Grid>
-
-      <Grid item xs={12} lg={7}>
-        <Box className={classes.boxBiography} p={3}>
-          <Typography variant="h5" component="h5">Sobre mim</Typography>
-        </Box>
-      </Grid>
-    </Grid>
+    </>
   );
 }
 

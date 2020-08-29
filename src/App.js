@@ -1,24 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { createMuiTheme, ThemeProvider, Container } from '@material-ui/core';
+import { ThemeProvider, Container } from '@material-ui/core';
+import { theme } from './theme';
 
 // Pages
 import Error404 from './pages/Error 404';
 import Home from './pages/Home';
 
-
 function App() {
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: '#723891'
-      },
-      secondary: {
-        main: '#FF5484'
-      }
-    },
-    spacing: {}
-  });
   return (
     <ThemeProvider theme={theme}>
       <Container fixed>
